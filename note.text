@@ -1,0 +1,12 @@
+1. Virtual Enviroment Activation :   source myenv/bin/activate
+
+
+---2nd Lab---
+    . Image Negative
+    . Image Thresholding
+    . Log Transformation
+
+    . Gamma Correction 
+    . Contrast Stretching (min-max)
+
+Log Transformation :
