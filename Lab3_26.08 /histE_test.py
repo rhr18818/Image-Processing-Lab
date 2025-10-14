@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 def calculate_histogram(image):
 
-    # Calculate the histogram
+    # Calculate the histogram-- count the intensity
     histogram, bins = np.histogram(image, bins=256, range=(0, 256))
     
     return histogram
@@ -22,11 +22,11 @@ def plot_histogram_rgb(hist_b, hist_g, hist_r):
     
     for i in range(3):
         plt.subplot(1, 3, i+1)
-        plt.bar(range(256), hists[i].ravel(), color=colors[i], width=1)
+        plt.bar(range(256), hists[i].ravel(), color=colors[i], width=1) # ravel for safety reason 2D to 1D ,but here no use , our is 1D
         plt.title(titles[i])
         plt.xlabel("Pixel Value")
         plt.ylabel("Frequency")
-        plt.xlim([0, 256])
+        plt.xlim([0, 256])#not necessary range fixed in x axis
     
     plt.tight_layout()
     # plt.show()
