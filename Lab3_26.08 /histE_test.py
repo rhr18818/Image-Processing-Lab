@@ -21,7 +21,7 @@ def plot_histogram_rgb(hist_b, hist_g, hist_r):
     plt.figure(figsize=(15, 5))
     
     for i in range(3):
-        plt.subplot(1, 3, i+1)
+        plt.subplot(1, 3, i+1) # row, column , iteration 
         plt.bar(range(256), hists[i].ravel(), color=colors[i], width=1) # ravel for safety reason 2D to 1D ,but here no use , our is 1D
         plt.title(titles[i])
         plt.xlabel("Pixel Value")
