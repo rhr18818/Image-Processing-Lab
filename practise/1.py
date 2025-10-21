@@ -35,6 +35,10 @@ gaussian_filtered   = convolve2d(gray_original_img,gauss_kernel,mode='same',boun
 #color image
 b,g,r  = cv2.split(orginal_img)
 
+##hsv
+hsv_img = cv2.cvtColor(orginal_img,cv2.COLOR_BGR2HSV)
+h,s,v = cv2.split(hsv_img)
+
 b_avg  = convolve2d(b,weighted_kernel,mode='same',boundary='fill',fillvalue=0)
 g_avg  = convolve2d(g,weighted_kernel,mode='same',boundary='fill',fillvalue=0)
 r_avg  = convolve2d(r,weighted_kernel,mode='same',boundary='fill',fillvalue=0)
